@@ -1,0 +1,309 @@
+/*
+ * Created by jub on 02.12.2017.
+
+
+Notes:
+        Name        Normal  Hover   Active
+    child-1         #E74F4F # #
+    child-2         #6bd2db # #
+    child-3         #9ed670 # #
+    child-4         #EC732D # #
+    child-5         #1c1c1c # #
+    child-6         #ffbe4f # #
+    child-7         #E36290 # #
+
+/*----------------------------------------------------------------
+        General Styling
+----------------------------------------------------------------*/
+html {
+    min-height: 100%;
+    background: #212121;
+}
+
+body {
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(#333333,#212121);
+    background-repeat:no-repeat !important;
+    color: #dddddd;
+    text-align: center;
+    margin: 0 0 84px;
+}
+
+div {
+  --spacing: .25em;
+}
+
+.spacer_top {
+    height: 70px;
+}
+
+.hide {
+    display: none;
+}
+
+/*----------------------------------------------------------------
+        General Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Header Styling
+----------------------------------------------------------------*/
+header {
+    min-width: 30ch;
+    max-width: 133ch;
+    height: 158px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-shadow: 0 0px 20px 0px rgba(0,0,0,.5);
+}
+
+#header_top {
+    height: 26px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#header_mid {
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+
+}
+
+/*----------------------------------------------------------------
+        Header Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Form Styling
+----------------------------------------------------------------*/
+/*------------------------------------------------------
+        Searchbox
+------------------------------------------------------*/
+#searchbox {
+    min-width: 12ch;
+    margin: auto;
+}
+
+#search_input {
+    min-width: 15ch;
+    width: 80%;
+    max-width: 800px;
+    height: 35px;
+    margin: auto;
+
+}
+
+/*------------------------------------------------------
+        Searchbox
+------------------------------------------------------*/
+input[type="text"] {
+    background: #333333;
+    color: rgba(33,33,33,0.75);
+    padding: 5px;
+    font-size: 2em;
+    text-align: center;
+    border: 2px solid rgba(33,33,33,0.5);
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+    transition: box-shadow 500ms ease;
+}
+
+input[type="text"]:hover {
+    border: 2px solid rgba(39,39,39,0.75);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,0.35);
+    transition: box-shadow 500ms ease;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+    color: #1c1c1c;
+    border: 2px solid #1c1c1c;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 18px 0 rgba(0,0,0,0.5);
+    transition: box-shadow 500ms ease;
+}
+
+/*----------------------------------------------------------------
+        Form Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Pages Styling
+----------------------------------------------------------------*/
+.backboard {
+    margin: -96px var(--spacing) 0px;
+}
+
+.pagecontent {
+    position: relative;
+    font-family: 'Varela Round', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    background: linear-gradient(#3e3e3e,#2d2d2d);
+    height: auto;
+    min-width: 70ch;
+    max-width: 100ch;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    transition: box-shadow 500ms ease;
+}
+
+.pagecontent:hover {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.6);
+    transition: box-shadow 500ms ease;
+
+}
+
+.pagecontentspacing {
+    margin: 34px 48px 34px;
+}
+
+/*----------------------------------------------------------------
+        Pages Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Dashboard
+----------------------------------------------------------------*/
+#dashboard {
+    letter-spacing: -1em;
+    text-align: left;
+    display: inline-block;
+    overflow-x: shown;
+    --spacing: .17em;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+    transition: color 150ms;
+    margin-left: 20px;
+}
+
+a.first {
+    margin-left: 18px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    color: var(--text-color);
+    display: inline-block;
+    position: relative;
+    font-size: 2em;
+    letter-spacing: normal;
+    transition: color 200ms;
+}
+
+
+li:first-child:after {
+    /*content: '|';*/
+    /*content: '\000BB';*/ /* For » arrows */
+    content: '';
+    border-right: 2px solid;
+    transition: border-right 200ms;
+    margin-right: var(--spacing);
+    position: absolute;
+    right: 0;
+    height: 1em;
+}
+
+/* Hover effects */
+ul:hover li:first-child:after {
+    border-right: 4px solid;
+}
+
+a:hover, li:hover, li:first-child {
+    color: inherit;
+    transition: color 200ms;
+}
+
+li:first-child, h1 {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li:nth-child(2) {
+    margin-left: var(--spacing);
+}
+
+li:not(:first-child) + li:before {
+    content: var(--link-separator);
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    color: var(--text-color);
+    /*--link-separator: '        ';*/
+    transition: color 200ms;
+}
+
+/* Categories */
+/* Amount of chars in longest category name + 1 */
+li:first-child {
+    width: 8ch;
+}
+
+/* Media */
+ul:nth-child(1) {
+    color: #E74F4F;
+}
+
+/* Social */
+ul:nth-child(2) {
+    color: #6bd2db;
+}
+
+/* Games */
+ul:nth-child(3) {
+    color: #9ed670;
+}
+
+/* Reddit */
+ul:nth-child(4) {
+    color: #EC732D;
+}
+
+/* Code */
+ul:nth-child(5) {
+    color: #1c1c1c;
+}
+
+/* Banking */
+ul:nth-child(6) {
+    color: #ffbe4f;
+}
+
+/* Misc */
+ul:nth-child(7) {
+    color: #E36290;
+}
+
+/*----------------------------------------------------------------
+        Dashboard
+----------------------------------------------------------------*/
